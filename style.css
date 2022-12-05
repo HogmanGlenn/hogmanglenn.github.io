@@ -10,21 +10,23 @@
     height: 100vh;
     position: absolute;
     overflow: hidden;
-    background: linear-gradient(to right, #663300, #fff);
+    background: linear-gradient(to right, #ECECEC, #464646);
 }
 nav{
-    width: 90%;
+    width: 100%;
     position: sticky;
-    margin: 20px auto;
+    margin: 0px auto;
     z-index: 1;
     display: flex;
     align-items: center;
+    background-color: #000;
 }
 .logo{
     flex-basis: 20%;
 }
 .logo img{
-    width: 150px; 
+    filter: invert();
+    width: 70px; 
 }
 .nav-links{
     flex: 1;
@@ -36,8 +38,18 @@ nav{
     margin: 0 20px;
 }
 .nav-links ul li a{
-    color: #000;
+    color: #fff;
     text-decoration: none;
+}
+.nav-links ul li b{
+
+    font-size: 30;
+    margin-right: 450px;
+    color: #fff;
+    text-decoration: none;
+}
+.nav-links ul li a:hover{
+    filter: Invert(15%);
 }
 .information{
     width: 1000px;
@@ -54,7 +66,7 @@ nav{
     top: 0%;
     left: 0%;
     border-radius: 50%;
-    background: linear-gradient(to left, #663300, #fff);
+    transform: rotate(0deg);
 }
 .feature img{
     width: 70px;
@@ -62,39 +74,87 @@ nav{
 .feature{
     position: absolute;
     display: flex;
-    color: #fff;
+    color: #000;
 }
 .feature div{
-    margin-left: 30px;
+    margin-left: 15px;
+    margin-top: 25px;
 }
 .feature div p{
     margin-top: 8px;
 }
 .one{
     top: 450px;
-    right: 50px;
+    left: 600px;
+    visibility: hidden;
 }
 .two{
-    top: 150px;
-    left: 350px;
+    top: 350px;
+    lefT: 600px;
 }
 .three{
-    bottom: 450px;
-    left: 50px;
+    top: 450px;
+    left: 600px;
 }
 .four{
-    bottom: 150px;
-    right: 350px;
+    top: 550px;
+    left: 600px;
+}
+.five{
+    top: 450px;
+    left: 600px;
+    visibility: hidden;
 }
 .me{
-    width: 300px;
-    height: 320px;
+    width: 400px;
+    height: 420px;
     position: absolute;
     top: 50%;
-    left: 35%;
+    left: 10%;
     transform: translateY(-50%);
     z-index: 1;
     object-fit: cover;
     border-radius: 50%;
 
+}
+.controls{
+    position: absolute;
+    left: 800;
+    top: 48%;
+    transform: translateY(-40%);
+    text-align: center;
+}
+#upbtn{
+    border: none;
+    background-color: transparent;
+    width: 40px;
+    cursor: pointer;
+}
+#upbtn:hover{
+    filter: Invert(30%);
+}
+#dwnbtn{
+    margin-top: 40px;
+    border: none;
+    background-color: transparent;
+    width: 40px;
+    cursor: pointer;
+    
+}
+#dwnbtn:hover{
+    filter: Invert(30%);
+}
+#upButton{
+    width: 40px;
+    cursor: pointer;
+}
+#downButton{
+    width: 40px;
+    cursor: pointer;
+}
+.WIP{
+    font-size: 20;
+    margin-top: 150px;
+    margin-right: 200px;
+    text-align: right;
 }
