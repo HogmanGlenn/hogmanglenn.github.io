@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Welcome to my website!</title>
+    <title>GlennHögman.com - About</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,65 +13,38 @@
             <div class="nav-links">
                 <ul>
                     <li><b href="#">Glenn Högman</b></li>
-                    <li><a href="#">Home</a></li>
+                    <a type="button" href="https://www.glennhogman.com">Home</a>
                     <a type="button" href="https://www.twitter.com/xGlete" target="_blank">Twitter</a>
                     <a type="button" href="https://www.linkedin.com/in/glenn-högman-a78484236" target="_blank">LinkedIn</a>
                     <div class="dropdown">
                         <button onClick="myFunction()" class="dropbtn">CV</button>
                         <div id="myDropdown" class="dropdown-content">
-                            <a href="aboutme.html">View</a>
+                            <a type="button" onClick="ShowCV()">View</a>
                             <a href="files/GlennHogman_CV_2023.pdf" download="GlennHogman_CV_2023">Download</a>
-
                         </div>
                     </div>
-                    <li><a href="#">About</a></li>
+                    <a type="button" href="#">About</a>
                 </ul>
             </div>
         </nav>
 
         <div class="information">
-            <img src="images/self.jpg" class="me">
-            <div id="circle">
-                <div class="feature one">
-                    <img src="images/twitter.png">
-                    <div>
-                        <h4>Twitter</h4>
-                        <p>@xGlete</p>
-                    </div>
-                </div>
-                <div class="feature two">
-                    <img src="images/finland.png">
-                    <div>
-                        <h4>Suomi</h4>
-                    </div>
-                </div>
-                <div class="feature three">
-                    <img src="images/sweden.png">
-                    <div>
-                        <h4>Svenska</h4>
-                    </div>
-                </div>
-                <div class="feature four">
-                    <img src="images/united-kingdom.png">
-                    <div>
-                        <h4>English</h4>
-                    </div>
-                </div>
-                <div class="feature five">
-                    <img src="images/LinkedIn.png">
-                    <div>
-                        <h4>LinkedIn</h4>
-                    </div>
-                </div>
+            <img src="images/self.jpg" class="me2">
+        </div>
+            <div class="aboutMeText">
+            <h1>Hello!<br>
+                <br>I am a third year student looking for work within the computer science field.<br>
+                <br>Please press the CV button in the top bar if you would like to know more about my education or work experience!
+            </h1>
+        </div>
+        <div ID="CV" style="display:none">
+            <embed src="files/GlennHogman_CV_2023.pdf" width="700px" height="800px"/>
+            <button id="closebtn" onClick="ShowCV()">
+                <img src="images/remove.png" id="closeButton">
+            </button>
             </div>
         </div>
-        <div class="WIP">
-            <h1>This website is a work in progress!</h1>
-        </div>
         <div class="controls">
-            <button id="upbtn"><img src="images/up.png" id="upButton"></button><br>
-            <button id="dwnbtn"><img src="images/down.png" id="downButton"></button><br>
-
             <script src="index.js"></script>
         </div>
     </div>

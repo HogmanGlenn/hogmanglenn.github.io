@@ -110,6 +110,7 @@ nav{
 }
 .two:hover {
     filter:drop-shadow(0 0 0.75rem rgb(48, 48, 48));
+
 }
 .three{
     top: 450px;
@@ -142,6 +143,19 @@ nav{
     border-radius: 50%;
 
 }
+.me2{
+    width: 500px;
+    height: 520px;
+    position: absolute;
+    top: 50%;
+    left: 120%;
+    transform: translateY(-50%);
+    z-index: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    animation-name: animateTransition;
+    animation-duration: 1s;
+}
 .controls{
     position: absolute;
     left: 800;
@@ -170,7 +184,7 @@ nav{
     display: inline-block;
 }
 .dropdown-content {
-    left: 5px;
+    left: 2px;
     display: none;
     position: absolute;
     background-color: #868686;
@@ -184,6 +198,8 @@ nav{
     padding: 6px 4px;
     text-decoration: none;
     display: block;
+    animation-name: animateDrop;
+    animation-duration: 500ms;
 }
 .dropdown-content a:hover {
     filter:blur(5%);
@@ -195,9 +211,21 @@ nav{
 .WIP {
     font-size: 16;
     margin-top: 150px;
-    margin-right: 200px;
-    text-align: right;
+    margin-left: 1000px;
+    margin-right: 100px;
+    text-align: left;
+    max-width: 600px;
 
+}
+.aboutMeText {
+    font-size: 16;
+    margin-top: 150px;
+    margin-right: 1000px;
+    margin-left: 200px;
+    text-align: left;
+    max-width: 600px;
+    animation-name: animateTransition;
+    animation-duration: 1s;
 }
 #CV {
     position: absolute;
@@ -214,4 +242,13 @@ nav{
 }
 #closeButton:hover {
     filter: invert(20%);
+}
+@keyframes animateTransition {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
+
+@keyframes animateDrop {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
 }
