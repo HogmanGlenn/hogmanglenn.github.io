@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Professional profile for Glenn Högman.">
+    <title>About | Glenn Högman</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="/" aria-label="Glenn Högman home">
+            <span class="brand-mark">GH</span>
+            <span>Glenn Högman</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+            <a href="/#profile">Profile</a>
+            <a href="/#stack">Stack</a>
+            <a href="#cv">CV</a>
+            <a href="/about/">About</a>
+            <a href="https://www.linkedin.com/in/glenn-högman-a78484236" target="_blank" rel="noreferrer">LinkedIn</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-intro" aria-labelledby="about-title" data-section>
+            <div data-reveal>
+                <h1 id="about-title">Performance engineer. Software builder.</h1>
+            </div>
+            <div class="about-summary" data-reveal>
+                <p>Main expertise: performance testing, workload scripting, result analysis, and clear reporting.</p>
+                <p>I also build desktop tools, web interfaces, API integrations, automation scripts, and CI/CD workflows.</p>
+                <div class="language-panel" aria-label="Native languages">
+                    <p>Fully native in</p>
+                    <div class="language-list">
+                        <span><img src="/images/united-kingdom.png" alt=""> English</span>
+                        <span><img src="/images/sweden.png" alt=""> Swedish</span>
+                        <span><img src="/images/finland.png" alt=""> Finnish</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="focus-strip" aria-label="Competency areas" data-section data-reveal>
+            <article>
+                <h2>Performance</h2>
+                <p>LoadRunner, DevWeb, JMeter, workload design, bottleneck analysis.</p>
+            </article>
+            <article>
+                <h2>Software</h2>
+                <p>Python, JavaScript, TypeScript, Java, C, desktop tooling, web development, AI-assisted development.</p>
+                <p class="more-note">and more...</p>
+            </article>
+            <article>
+                <h2>Delivery</h2>
+                <p>Jenkins, Git, Docker, Azure, REST APIs, Jira, Confluence, Bitbucket.</p>
+            </article>
+        </section>
+
+        <section id="cv" class="cv-section" aria-labelledby="cv-title" data-section>
+            <div class="cv-header" data-reveal>
+                <h2 id="cv-title">Request CV.</h2>
+            </div>
+            <form class="cv-request" id="cvRequestForm" data-reveal novalidate>
+                <div class="form-copy">
+                    <p>Request my CV and I will follow up.</p>
+                </div>
+                <label for="cvEmail">Email address</label>
+                <div class="request-row">
+                    <input id="cvEmail" name="email" type="email" inputmode="email" autocomplete="email" placeholder="name@company.com" maxlength="120" required>
+                    <button class="button primary" type="submit">Request CV</button>
+                </div>
+                <label class="form-trap" for="cvWebsite">Website</label>
+                <input class="form-trap" id="cvWebsite" name="website" type="text" tabindex="-1" autocomplete="off">
+                <p class="form-note" id="cvRequestStatus" role="status" aria-live="polite">Don't worry, you won't be put on any list. This is just so that I can send you my CV!</p>
+            </form>
+        </section>
+    </main>
+
+    <script src="/index.js"></script>
+</body>
+</html>
