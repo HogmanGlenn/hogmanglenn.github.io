@@ -327,6 +327,7 @@ h1::after {
 
 .profile-section,
 .stack-section,
+.projects-section,
 .cv-section,
 .about-intro,
 .focus-strip {
@@ -479,6 +480,137 @@ h1::after {
     color: var(--ink);
     font-weight: 800;
     line-height: 1.35;
+}
+
+.projects-section {
+    background: var(--page);
+}
+
+.projects-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.52fr);
+    column-gap: clamp(28px, 6vw, 80px);
+    align-items: center;
+}
+
+.section-kicker {
+    grid-column: 1 / -1;
+    margin-bottom: 14px;
+    color: var(--accent-strong);
+    font-size: 0.78rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.projects-heading > p:last-child {
+    margin-bottom: 4px;
+    color: var(--muted);
+    line-height: 1.62;
+}
+
+.project-list {
+    display: grid;
+    gap: 12px;
+    width: min(1180px, 100%);
+    margin: 0 auto;
+}
+
+.project-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.88fr);
+    gap: clamp(28px, 4vw, 56px);
+    align-items: center;
+    min-height: 278px;
+    padding: clamp(24px, 3.6vw, 42px);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.58);
+    transition: border-color 180ms var(--ease), background 180ms var(--ease);
+}
+
+.project-panel:hover {
+    border-color: rgba(23, 23, 23, 0.24);
+    background: rgba(255, 255, 255, 0.78);
+}
+
+.project-copy {
+    align-self: center;
+    max-width: 620px;
+}
+
+.project-kind {
+    margin-bottom: 10px;
+    color: var(--muted);
+    font-size: 0.76rem;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.project-copy h3 {
+    margin-bottom: 14px;
+    font-size: clamp(1.65rem, 3vw, 2.65rem);
+    line-height: 1;
+}
+
+.project-description {
+    max-width: 610px;
+    margin-bottom: 18px;
+    color: var(--muted);
+    line-height: 1.62;
+}
+
+.project-stack {
+    margin-bottom: 22px;
+    color: var(--ink);
+    font-size: 0.88rem;
+    font-weight: 800;
+}
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+}
+
+.project-links a {
+    min-height: 32px;
+    padding: 6px 0;
+    color: var(--ink);
+    font-size: 0.92rem;
+    font-weight: 800;
+    text-decoration-color: rgba(23, 23, 23, 0.34);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.project-links a:hover,
+.project-links a:focus-visible {
+    color: var(--accent-strong);
+    text-decoration-color: currentColor;
+}
+
+.project-preview {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    margin: 0;
+    justify-self: end;
+    border: 1px solid rgba(23, 23, 23, 0.2);
+    border-radius: 6px;
+    overflow: hidden;
+    background: #121212;
+}
+
+.project-preview img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.project-display .project-preview {
+    aspect-ratio: 715 / 484;
 }
 
 .cv-section {
@@ -815,6 +947,23 @@ h1::after {
         min-height: 0;
     }
 
+    .projects-heading {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-heading > p:last-child {
+        margin-top: 18px;
+    }
+
+    .project-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .project-preview {
+        width: min(100%, 460px);
+        justify-self: start;
+    }
+
     .capability span {
         margin-bottom: 28px;
     }
@@ -825,7 +974,7 @@ h1::after {
     }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 760px) {
     .site-header {
         align-items: flex-start;
         flex-direction: column;
@@ -834,12 +983,14 @@ h1::after {
     }
 
     .site-nav {
-        justify-content: flex-start;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         width: 100%;
     }
 
     .site-nav a {
-        padding-inline: 9px;
+        width: 100%;
+        padding-inline: 6px;
         font-size: 0.84rem;
     }
 
@@ -894,6 +1045,7 @@ h1::after {
 
     .profile-section,
     .stack-section,
+    .projects-section,
     .cv-section,
     .focus-strip {
         padding-inline: 16px;
@@ -905,6 +1057,16 @@ h1::after {
 
     .request-row {
         grid-template-columns: 1fr;
+    }
+
+    .project-panel {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 20px;
+    }
+
+    .project-preview {
+        margin-top: 8px;
     }
 }
 

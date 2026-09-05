@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20260713-2">
+    <link rel="stylesheet" href="style.css?v=20260905-2">
 </head>
 <body>
     <header class="site-header">
@@ -19,6 +19,7 @@
         <nav class="site-nav" aria-label="Primary navigation">
             <a href="#profile">Profile</a>
             <a href="#stack">Stack</a>
+            <a href="#projects">Projects</a>
             <a href="#cv">CV</a>
             <a href="/about/">About</a>
             <a href="https://www.linkedin.com/in/glenn-högman-a78484236" target="_blank" rel="noreferrer">LinkedIn</a>
@@ -122,6 +123,79 @@
                         <li>Confluence</li>
                         <li>Bitbucket</li>
                     </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section" aria-labelledby="projects-title" data-section>
+            <div class="section-heading projects-heading" data-reveal>
+                <p class="section-kicker">Hobby projects</p>
+                <h2 id="projects-title">Useful things I wanted to exist.</h2>
+                <p>My priorities are simple: solve a real problem, keep the interface clear, and leave the person using it in control.</p>
+            </div>
+            <div class="project-list">
+                <article class="project-panel project-dota" data-reveal>
+                    <div class="project-copy">
+                        <p class="project-kind">Community utility</p>
+                        <h3>Dota 2 leaderboards</h3>
+                        <p class="project-description">A fast, searchable view of the official regional rankings where you can build personalized leaderboards with filters and pinned players. Your setup is saved locally in the browser or carried in the URL.</p>
+                        <p class="project-stack">React · Python · GitHub Actions</p>
+                        <div class="project-links">
+                            <a href="https://dota2leaderboards.com/" target="_blank" rel="noreferrer">dota2leaderboards.com</a>
+                            <a href="https://github.com/HogmanGlenn/dota2leaderboards" target="_blank" rel="noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                    <figure class="project-preview">
+                        <img src="images/projects/dota2-leaderboards.png" alt="Dota 2 Leaderboards page showing the Europe rankings" loading="lazy">
+                    </figure>
+                </article>
+
+                <article class="project-panel project-munaliiga" data-reveal>
+                    <div class="project-copy">
+                        <p class="project-kind">Community website</p>
+                        <h3>Munaliiga website</h3>
+                        <p class="project-description">The home of a community-run Dota 2 league for newer players, helping players understand the league, sign up, and join the community.</p>
+                        <p class="project-stack">Next.js · TypeScript · Markdown-driven content management</p>
+                        <div class="project-links">
+                            <a href="https://munaliiga.fi/" target="_blank" rel="noreferrer">munaliiga.fi</a>
+                            <a href="https://github.com/HogmanGlenn/munaliiga-web" target="_blank" rel="noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                    <figure class="project-preview">
+                        <img src="images/projects/munaliiga.png" alt="Munaliiga homepage with its Dota, together introduction" loading="lazy">
+                    </figure>
+                </article>
+
+                <article class="project-panel project-display" data-reveal>
+                    <div class="project-copy">
+                        <p class="project-kind">Windows utility</p>
+                        <h3>DisplaySwitch</h3>
+                        <p class="project-description">Built to take back control of the devices you own. DisplaySwitch changes Samsung and DDC/CI monitor inputs from the app, a hotkey, a shortcut, or the command line.</p>
+                        <p class="project-stack">C# · WinUI · .NET</p>
+                        <div class="project-links">
+                            <a href="https://github.com/HogmanGlenn/DisplaySourcePilot/releases/latest" target="_blank" rel="noreferrer">Download for Windows</a>
+                            <a href="https://github.com/HogmanGlenn/DisplaySourcePilot" target="_blank" rel="noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                    <figure class="project-preview">
+                        <img src="images/projects/displayswitch.png?v=20260905-2" alt="DisplaySourcePilot input and application behavior controls" loading="lazy">
+                    </figure>
+                </article>
+
+                <article class="project-panel project-offers" data-reveal>
+                    <div class="project-copy">
+                        <p class="project-kind">Browser utility</p>
+                        <h3>OfferTemplates</h3>
+                        <p class="project-description">A local-first browser tool for creating, editing, and reusing text templates. Configuration stays in the browser and can be moved between devices.</p>
+                        <p class="project-stack">JavaScript · HTML · CSS</p>
+                        <div class="project-links">
+                            <a href="https://www.glennhogman.com/offertemplates/" target="_blank" rel="noreferrer">/offertemplates</a>
+                            <a href="https://github.com/HogmanGlenn/offertemplates" target="_blank" rel="noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                    <figure class="project-preview">
+                        <img src="images/projects/offertemplates.png" alt="OfferTemplates browser interface with template editor and preview" loading="lazy">
+                    </figure>
                 </article>
             </div>
         </section>
